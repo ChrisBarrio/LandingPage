@@ -43,6 +43,7 @@ a{
 // <!-- start head -->
 header{
 	position: fixed;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
 	height: 8rem;
@@ -448,7 +449,10 @@ footer{
 	}
 }
 
+
+
 // -------------RESPONSIVE---------------
+
 // ----- IPAD -----
 @media (max-width: 811px) {
 	html {
@@ -493,6 +497,52 @@ footer{
 			display: flex;
 		}
 	}
+	.home{
+		display: none;
+		background: url(./img/about-img.png) no-repeat;
+		background-size: cover;
+		background-position: center;
+		// min-height: 100vh;
+		text-align: center;
+		padding-top: 8rem; 
+		
+		& .content{
+		  padding-top: 5rem;
+		  max-width:70rem;
+		  margin:0 auto;
+		  & h3{
+			font-size: var(--font-size_xl);
+		  }
+		  & p{
+			color:var(--white);
+			padding:3rem 0;
+			font-size: var(--font-size_l);
+		  }
+		  & a{
+				  padding: 1rem;
+				border-radius: 3rem;
+				border: none;
+				  background-image: linear-gradient(280deg, #f369ca 0, #e462cf 16.67%, #d35bd4 33.33%, #be55d8 50%, #a651dd 66.67%, #8a4fe1 83.33%, #664fe6 100%);
+		  }
+		  & a:hover{
+			  letter-spacing: .3rem;
+		  }
+		}
+		& .swiper-container {
+		  width: 100%;
+		  padding: 5rem 0 5rem 0;
+		  
+		  & .swiper-slide {
+			width: 30rem;
+			height: 50rem;
+		  }
+		  & .swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		  }
+		}
+	  }
 	.about_app{
 		display: block;
 		padding: 0 10rem 0 10rem;
@@ -610,7 +660,7 @@ footer{
 
 // ----- MOBILE -----
 
-@media (max-width: 376px) {
+@media (max-width: 320px) {
 	
 	html {
 		font-size:50%;
@@ -621,7 +671,7 @@ footer{
 			font-size: 1rem;
 		}
 		& .nav_bar{
-			display: block;
+			display: none;
 			top: 105%; right:-100%;
 			height: calc(100vh - 10rem);
 			width: 100%;
@@ -646,6 +696,7 @@ footer{
 			}
 
 			&.active{ // el & y el active tienen que estar juntos ya que sino no toma el cambio(solo en Sass)
+				display: block;
 				right:0%;
 			}
 			
@@ -654,7 +705,52 @@ footer{
 			display: flex;
 		}
 	}	
-	
+	.home{
+		display: none;
+		background: url(./img/about-img.png) no-repeat;
+		background-size: cover;
+		background-position: center;
+		// min-height: 100vh;
+		text-align: center;
+		padding-top: 8rem; 
+		
+		& .content{
+		  padding-top: 5rem;
+		  max-width:70rem;
+		  margin:0 auto;
+		  & h3{
+			font-size: var(--font-size_xl);
+		  }
+		  & p{
+			color:var(--white);
+			padding:3rem 0;
+			font-size: var(--font-size_l);
+		  }
+		  & a{
+				  padding: 1rem;
+				border-radius: 3rem;
+				border: none;
+				  background-image: linear-gradient(280deg, #f369ca 0, #e462cf 16.67%, #d35bd4 33.33%, #be55d8 50%, #a651dd 66.67%, #8a4fe1 83.33%, #664fe6 100%);
+		  }
+		  & a:hover{
+			  letter-spacing: .3rem;
+		  }
+		}
+		& .swiper-container {
+		  width: 100%;
+		  padding: 5rem 0 5rem 0;
+		  
+		  & .swiper-slide {
+			width: 30rem;
+			height: 50rem;
+		  }
+		  & .swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		  }
+		}
+	  }
 	.app_features{
 		display: block;
 		padding: 1rem;
@@ -771,6 +867,370 @@ footer{
 	.customer_review{
 		display: block;
 		padding: 0 10rem 0 10rem;
+		margin: 2rem 0;	
+		text-align: center;
+	
+		& h2{
+			font-size: var(--font-size_xl);
+			text-align: center;
+			padding: 3rem;
+	
+			& span{
+				color: var(--pink);
+			}
+		}
+		& .customer_review_container{
+			display: block;
+			& .customer_review_usuario{
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+				margin: 2rem;
+				padding: 1rem;
+				border-radius:2rem;
+				& img{
+					border-radius: 50%;
+					width: 10rem;
+				}
+				& h3{
+					font-size: var(--font-size_l);
+					padding: 2rem;
+				}
+				& p{
+					padding: 1rem;
+				}
+				& i{
+					color: var(--pink);
+				}
+			}
+		}
+	}
+	
+	.our_pricing_plans{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1rem;
+		margin: 2rem 0;
+		text-align: center;
+		width: 100%;
+			& h2{
+				text-align: center;
+				padding: 3rem;
+				color: var(--pink);
+				font-size: var(--font-size_xl);
+			}
+			& .our_pricing_plans_container{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				
+				& .our_pricing_opcion{
+					display: block;
+					width: 90%;
+					margin:2rem;
+					padding: 3rem;
+					border-radius:2rem;
+					box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	
+					& .our_pricing_opcion_price{
+						font-size: var(--font-size_xxl);
+						padding: 2rem;
+						color: var(--pink);
+					}
+					& .our_pricing_opcion_type{
+						padding: 2rem;
+						font-size: var(--font-size_l);
+					}
+					& li{
+						padding: 1rem 0;
+						list-style-type:circle;
+					}
+					& div{
+						display: flex;
+						justify-content: center;
+						& a{
+							padding: .8rem;
+							margin-top: 3rem;
+							border-radius: 1rem;
+							background-image: linear-gradient(280deg, #f369ca 0, #e462cf 16.67%, #d35bd4 33.33%, #be55d8 50%, #a651dd 66.67%, #8a4fe1 83.33%, #664fe6 100%);
+						}
+						& a:hover{
+								letter-spacing: .3rem;
+							}
+						
+					}
+				} 
+			}
+				
+	}	
+
+	.form{
+		display: block;
+		padding: 0;
+		margin: 2rem 0;
+		text-align: center;
+			& h2{
+				text-align: center;
+				padding: 3rem;
+				color: var(--pink);
+				font-size: var(--font-size_xl);
+			}
+			& .container_form{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+	
+				& form{
+					display: block;
+					width: 80%;
+					& div{
+						margin: 2rem 0;
+					}
+					& label{
+						font-size: var(--font-size_l);
+						font-weight: 600;
+					}
+					& input{
+						width: 100%;
+					}
+					& select{
+						width: 25rem;
+						padding-left: 1rem;
+						margin-left: 1rem;
+					}
+					& textarea{
+						width: 100%;
+					}
+				}
+				& .btn_form{
+					display: flex;
+					justify-content: center;
+					& input{
+						padding: 1rem;
+						border-radius: 3rem;
+						border: none;
+						background-image: linear-gradient(280deg, #f369ca 0, #e462cf 16.67%, #d35bd4 33.33%, #be55d8 50%, #a651dd 66.67%, #8a4fe1 83.33%, #664fe6 100%);
+					}
+					& input:hover{
+						letter-spacing: .3rem;
+					}
+				}
+			}
+	}
+}
+
+@media (max-width: 376px) {
+	
+	html {
+		font-size:50%;
+	}
+	
+	header{
+		& h1{
+			font-size: 1rem;
+		}
+		& .nav_bar{
+			display: none;
+			top: 105%; right:-100%;
+			height: calc(100vh - 10rem);
+			width: 100%;
+			background-color:var(--white);
+			position:absolute;
+			transition: 1s;
+			color: var(--black);
+			& ul{
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				height: 40rem;
+				width: auto;
+				
+				& a{
+					color: var(--black);
+				}
+				& a:hover{
+					color: var(--pink);
+					letter-spacing: .1rem;
+				}		
+			}
+
+			&.active{ // el & y el active tienen que estar juntos ya que sino no toma el cambio(solo en Sass)
+				display: block;
+				right:0%;
+			}
+			
+		}
+		& .btn_menu{
+			display: flex;
+		}
+	}	
+	
+	.home{
+		display: none;
+		background: url(./img/about-img.png) no-repeat;
+		background-size: cover;
+		background-position: center;
+		// min-height: 100vh;
+		text-align: center;
+		padding-top: 8rem; 
+		
+		& .content{
+		  padding-top: 5rem;
+		  max-width:70rem;
+		  margin:0 auto;
+		  & h3{
+			font-size: var(--font-size_xl);
+		  }
+		  & p{
+			color:var(--white);
+			padding:3rem 0;
+			font-size: var(--font-size_l);
+		  }
+		  & a{
+				  padding: 1rem;
+				border-radius: 3rem;
+				border: none;
+				  background-image: linear-gradient(280deg, #f369ca 0, #e462cf 16.67%, #d35bd4 33.33%, #be55d8 50%, #a651dd 66.67%, #8a4fe1 83.33%, #664fe6 100%);
+		  }
+		  & a:hover{
+			  letter-spacing: .3rem;
+		  }
+		}
+		& .swiper-container {
+		  width: 100%;
+		  padding: 5rem 0 5rem 0;
+		  
+		  & .swiper-slide {
+			width: 30rem;
+			height: 50rem;
+		  }
+		  & .swiper-slide img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		  }
+		}
+	  }
+
+	.app_features{
+		display: block;
+		padding: 1rem;
+		margin: 2rem 0;
+	
+		& h2{
+			font-size: var(--font-size_xl);
+			text-align: center;
+			padding: 3rem;
+			margin-top: 8rem;
+			& span{
+				color: var(--pink);
+			}
+		}
+		& .app_features_container{
+			display: grid;
+			justify-content: center;
+			grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
+			
+			& .app_features_container_item{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align:center;
+				padding: 2rem;
+				margin: 1rem;
+				border-radius:2rem;
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+				& div{
+					display: flex;
+					justify-content: center;
+				}
+				& h3{
+					font-size: var(--font-size_l);
+					padding: 1rem;
+				}
+				& p{
+					padding: 1rem;
+				}
+				& i{
+					color: var(--pink);
+				}
+			}
+		}
+	}
+	.about_app{
+		display: block;
+		padding: 0;
+		margin: 2rem 0;
+	
+			& h2{
+				font-size: var(--font-size_xl);
+				text-align: center;
+				padding: 3rem;
+				& span{
+					color: var(--pink);
+				}
+			}
+			& .about_app_container{
+				display: block;
+			}
+			
+			
+	}
+	.how_its_work{
+		display: block;
+		padding: 0 10rem 0 10rem;
+		margin: 2rem 0;
+		text-align: center;
+	
+	
+			& h2{
+				font-size: var(--font-size_xl);
+				text-align: center;
+				padding: 3rem;
+	
+				& span{
+					color: var(--pink);
+				}
+			}
+			
+		& .container_howItsWorks{
+				display: flex;
+				flex-direction: column;
+				
+				& h3{
+					color: var(--pink);
+					padding: 1rem;
+				}
+	
+				& .container_howItsWorks_columnLeft{
+					display: flex;
+					flex-direction: column;
+				}
+				
+				& .container_howItsWorks_columnMiddle{
+					display: none;
+					flex-direction: column;
+				}
+				
+				& .container_howItsWorks_columnRight{
+					display: flex;
+					flex-direction: column;
+				}
+				
+				& .container_howItsWorks_itemTop,
+					.container_howItsWorks_itemTop{
+						padding: 2rem 0;
+
+					}
+			}
+	
+	}
+	
+	.customer_review{
+		display: block;
+		padding: 0 ;
 		margin: 2rem 0;	
 		text-align: center;
 	
