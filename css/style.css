@@ -45,6 +45,8 @@ a {
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +54,6 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 8rem;
-  width: 100%;
   background-color: var(--bg);
   font-size: var(--font-size_l);
   border-bottom: 1px solid var(--pink);
@@ -66,7 +67,6 @@ header .container_logo-nombre {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 30%;
 }
 
 header .container_logo-nombre img {
@@ -85,16 +85,17 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 70%;
 }
 
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 80%;
+  padding: 0 3rem;
+}
+
+header nav ul a {
+  padding: 0 3rem;
 }
 
 header nav ul a:hover {
@@ -588,7 +589,7 @@ footer div a {
     font-size: 1rem;
   }
   header .nav_bar {
-    display: block;
+    display: none;
     top: 105%;
     right: -100%;
     height: calc(100vh - 10rem);
@@ -611,14 +612,19 @@ footer div a {
     height: 40rem;
     width: auto;
   }
+  header .nav_bar ul li {
+    padding: 3rem 0;
+  }
   header .nav_bar ul a {
     color: var(--black);
+    font-size: var(--font-size_xl);
   }
   header .nav_bar ul a:hover {
     color: var(--pink);
     letter-spacing: .1rem;
   }
   header .nav_bar.active {
+    display: block;
     right: 0%;
   }
   header .btn_menu {
@@ -822,8 +828,12 @@ footer div a {
     height: 40rem;
     width: auto;
   }
+  header .nav_bar ul li {
+    padding: 3rem 0;
+  }
   header .nav_bar ul a {
     color: var(--black);
+    font-size: var(--font-size_xl);
   }
   header .nav_bar ul a:hover {
     color: var(--pink);
@@ -1223,8 +1233,12 @@ footer div a {
     height: 40rem;
     width: auto;
   }
+  header .nav_bar ul li {
+    padding: 3rem 0;
+  }
   header .nav_bar ul a {
     color: var(--black);
+    font-size: var(--font-size_xl);
   }
   header .nav_bar ul a:hover {
     color: var(--pink);

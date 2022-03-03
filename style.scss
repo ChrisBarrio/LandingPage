@@ -43,22 +43,18 @@ a{
 // <!-- start head -->
 header{
 	position: fixed;
-	top: 0;
+	top:0; left: 0; right:0;
 	display: flex;
 	justify-content: space-between;
 	height: 8rem;
-	width: 100%;
 	background-color: var(--bg);
 	font-size: var(--font-size_l);
 	border-bottom: 1px solid var(--pink);
 	z-index: 9;
 
-	
-
 	& .container_logo-nombre{
 		display: flex;
 		align-items: center;
-		width: 30%;
 		& img{
 			width: 10rem;
 			height: 7rem;
@@ -70,11 +66,12 @@ header{
 	& nav{
 		display: flex;
 		align-items: center;
-		width: 70%;
 		&  ul{
 			display: flex;
-			justify-content: space-around;
-			width: 80%;
+			padding: 0 3rem;
+			& a{
+				padding: 0 3rem ;
+			}
 			& a:hover{
 				color: var(--pink);
 				letter-spacing: .1rem;
@@ -464,7 +461,7 @@ footer{
 			font-size: 1rem;
 		}
 		& .nav_bar{
-			display: block;
+			display: none;
 			top: 105%; right:-100%;
 			height: calc(100vh - 10rem);
 			width: 100%;
@@ -478,9 +475,14 @@ footer{
 				flex-direction: column;
 				height: 40rem;
 				width: auto;
+
+				& li{
+					padding: 3rem 0;
+				}
 				
 				& a{
 					color: var(--black);
+					font-size: var(--font-size_xl);
 				}
 				& a:hover{
 					color: var(--pink);
@@ -489,6 +491,7 @@ footer{
 			}
 
 			&.active{ // el & y el active tienen que estar juntos ya que sino no toma el cambio(solo en Sass)
+				display: block;
 				right:0%;
 			}
 			
@@ -496,7 +499,7 @@ footer{
 		& .btn_menu{
 			display: flex;
 		}
-	}
+	}	
 	.home{
 		display: none;
 		background: url(./img/about-img.png) no-repeat;
@@ -660,6 +663,8 @@ footer{
 
 // ----- MOBILE -----
 
+// small mobile
+
 @media (max-width: 320px) {
 	
 	html {
@@ -685,9 +690,14 @@ footer{
 				flex-direction: column;
 				height: 40rem;
 				width: auto;
+
+				& li{
+					padding: 3rem 0;
+				}
 				
 				& a{
 					color: var(--black);
+					font-size: var(--font-size_xl);
 				}
 				& a:hover{
 					color: var(--pink);
@@ -704,7 +714,8 @@ footer{
 		& .btn_menu{
 			display: flex;
 		}
-	}	
+	}
+
 	.home{
 		display: none;
 		background: url(./img/about-img.png) no-repeat;
@@ -1021,6 +1032,8 @@ footer{
 	}
 }
 
+//-- iphone mobile
+
 @media (max-width: 376px) {
 	
 	html {
@@ -1046,9 +1059,14 @@ footer{
 				flex-direction: column;
 				height: 40rem;
 				width: auto;
+
+				& li{
+					padding: 3rem 0;
+				}
 				
 				& a{
 					color: var(--black);
+					font-size: var(--font-size_xl);
 				}
 				& a:hover{
 					color: var(--pink);
