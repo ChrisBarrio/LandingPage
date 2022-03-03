@@ -5,6 +5,11 @@ btn_menu.addEventListener('click',()=>{
     nav_bar.classList.toggle('active')
 })
 
+// close de main when scroll
+
+window.onscroll = () =>{
+    nav_bar.classList.remove('active');
+}
 
 
 //-------carrousel--------
