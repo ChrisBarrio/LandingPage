@@ -11,7 +11,24 @@ window.onscroll = () =>{
     nav_bar.classList.remove('active');
 }
 
+//---- scroll suave en ancla
 
+const links = document.querySelectorAll(".nav_bar ul a");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
+  });
+}
 //-------carrousel--------
 
 var swiper = new Swiper(".image-slider", {
